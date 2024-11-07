@@ -130,7 +130,7 @@ html {
 /* Home Section Styling */
 .home {
   display: flex;
-  background: url(images/bannernew.jpg) no-repeat center;
+  background: url(images/hero.jpg) no-repeat center;
   height: 100vh;
   background-size: cover;
   background-attachment: fixed;
@@ -399,12 +399,90 @@ section .title::after {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .skills .skills-content .right .info img {
   padding: 10px;
   margin: 5px;
+}
+
+.achievements {
+  padding: 50px 0;
+  background-color: #f3f4f6; /* Subtle background for contrast */
+}
+
+.achievements .title::after {
+  /* background: #111; */
+  content: "what i achieve";
+}
+
+.achievements .title {
+  font-size: 34px;
+  color: #111;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.achievements-content {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 20px;
+  align-items: center;
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.achievement .icon {
+  font-size: 35px;
+  color: #007bff; /* Highlight color for icon */
+}
+
+.achievement .details h3 {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+}
+
+.achievement .details p {
+  margin: 5px 0 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .achievements-content {
+      padding: 0 10px;
+      flex-direction: column;
+  }
+
+  .achievement {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .achievement .icon {
+      margin-bottom: 10px;
+  }
 }
 
 /* Project section styling */
@@ -689,6 +767,8 @@ footer span a:hover {
   text-decoration: underline;
 }
 
+
+
 /* responsive media query start */
 @media (max-width: 1300px) {
   .home .max-width {
@@ -788,6 +868,11 @@ footer span a:hover {
   .contact .left .text {
     margin-top: 0px;
   }
+  .img_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 690px) {
@@ -806,6 +891,7 @@ footer span a:hover {
   .home .home-content a {
     font-size: 20px;
   }
+  
 }
 
 @media (max-width: 540px) {
